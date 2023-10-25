@@ -124,7 +124,7 @@ audio {display: block; }
 	margin: 0;
 	text-align: left;
 	}
-.controls-left { }
+.controls-left {}
 .controls-right .controlButton { position: relative; right: -65%; }
 
 /* Arrow Keys - only displayed when game isn't paused */
