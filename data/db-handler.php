@@ -3,7 +3,7 @@
 /* IMPORTANT:
  * change this to the main url of where you host the application, otherwise, every entry will be marked as a cheater
 */
-$hostdomain = 'pacman-retro-game.vercel.app';
+$hostdomain = 'https://pacman-retro-game.vercel.app';
 
 if (isset($_POST['action'])) {
 	switch ($_POST['action']) {
