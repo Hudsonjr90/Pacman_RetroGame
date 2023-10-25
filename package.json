@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/platzhersh/pacman-canvas.git"
+    "url": "git+https://github.com/Hudsonjr90/Pacman_RetroGame.git"
   },
-  "author": "platzh1rsch",
+  "author": "Hudson Kennedy",
   "license": "CC0 1.0 Universal",
   "bugs": {
-    "url": "https://github.com/platzhersh/pacman-canvas/issues"
+    "url": "https://github.com/Hudsonjr90/Pacman_RetroGame"
   },
-  "homepage": "https://github.com/platzhersh/pacman-canvas#readme",
+  "homepage": "https://github.com/Hudsonjr90",
   "dependencies": {
     "express": "4.18.1"
   },

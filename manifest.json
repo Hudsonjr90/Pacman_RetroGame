@@ -15,9 +15,9 @@
   "offline_enabled": true,
 
   "app": {
-    "urls": ["http://pacman.vercel.app/"],
+    "urls": ["http://pacman-retro-game.vercel.app"],
     "launch": {
-      "web_url": "http://pacman.vercel.app"
+      "web_url": "http://pacman-retro-game.vercel.app"
     }
   }
 }
