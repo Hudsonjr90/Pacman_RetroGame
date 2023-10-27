@@ -1,7 +1,7 @@
 {
-  "name": "pacman-canvas",
+  "name": "pacman-retro-game",
   "version": "1.0.6",
-  "description": "pacman-canvas =============",
+  "description": "pacman-retro-game =============",
   "main": "pacman-canvas.js",
   "scripts": {
     "start": "node server.js",

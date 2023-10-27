@@ -1,4 +1,4 @@
-# pacman-canvas
+# pacman-retro-game
 
 An old classic, re-written in HTML5.
 Visit http://pacman.vercel.app to see it live.
@@ -20,6 +20,11 @@ To change the look and feel, edit the `pacman-canvas.css` file or also the `inde
 ---
 
 # Version history
+
+_Version 1.0.7 - 27.10.2023_
+
+- fix highscore issue
+- update some names
 
 _Version 1.0.6 - 14.09.2023_
 
