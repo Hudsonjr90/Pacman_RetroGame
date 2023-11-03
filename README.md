@@ -1,236 +1,99 @@
-# pacman-retro-game
+Pac-Man
+=======
 
-An old classic, re-written in HTML5.
-Visit http://pacman.vercel.app to see it live.
+Uma homenagem histórica e uma recriação precisa do jogo de fliperama original Pac-Man.
 
-Sounds from
-http://soundfxcenter.com/ and http://soundfxnow.com/
+Inspirado em [The Pac-Man Dossier](http://home.comcast.net/~jpittman2/pacman/pacmandossier.html)
 
+### Em construção
+Som
+Cenas de corte
+Alternância de 2 jogadores
+Entre em contato comigo em hudsonhugo90@gmail.com
 
----
+### Licença
+Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo
+sob os termos da Licença Pública Geral GNU Versão 3 conforme publicada pela Free Software Foundation.
 
-# Get started
+### Jogar
+Você pode jogar o jogo em todos os navegadores compatíveis com canvas. Os controles de toque estão
+habilitados para navegadores móveis. O jogo é independente de resolução e se ajusta suavemente ao
+tamanho de qualquer tela. O desempenho pode aumentar ao diminuir a janela ou ampliar com seu navegador.
 
-To just run the game locally, run `npm start`.
-If you want to see the console logs in your browser, use the `npm run start:dev` instead.
+### Controles Principais
+arrastar: controlar o Pac-Man em navegadores móveis
+setas: controlar o Pac-Man
+end: pausar o jogo
+escape: abrir o menu do jogo
 
-To modify the game for your needs, look at the `pacman-canvas.js` file and make your modifications.
-To change the look and feel, edit the `pacman-canvas.css` file or also the `index.html`file, where everything comes together.
+### Navegadores de Desktop Confirmados
+Safari
+Firefox
+Chrome
 
----
+### Dispositivos Móveis Confirmados
+[iPad and iPhone (Mobile Safari)](http://www.atariage.com/forums/topic/202594-html5-pac-man/)
+Samsung Galaxy Tablet 7 (Firefox Beta)
+Nexus 7 (Chrome)
+Jogos
+Cada um dos jogos a seguir pode ser jogado no menu principal.
 
-# Version history
+![Montagem][1]
 
-_Version 1.0.7 - 27.10.2023_
+Pac-Man: fliperama original de 1980 da Namco.
+Ms. Pac-Man: modificação do Pac-Man de 1981 por GCC/Midway.
+Crazy Otto: versão interna não lançada da GCC da Ms. Pac-Man antes de ser vendida para a Midway. (Veja o vídeo)
+Cookie-Man: uma nova versão da Ms. Pac-Man com um sofisticado gerador de mapas procedurais.
+Modo Turbo
+Cada jogo possui um modo alternativo chamado Turbo (também conhecido como modo rápido). Esta é uma
+modificação popular de hardware do jogo encontrada em muitos fliperamas originais. Neste modo, o Pac-Man
+se move cerca de duas vezes mais rápido (mesma velocidade dos olhos desencarnados dos
+fantasmas) e não desacelera ao comer pellets.
 
-- fix highscore issue
-- update some names
+### Pontuações Altas
+As pontuações altas para cada jogo (normal e turbo separadamente) são armazenadas em sua máquina local pelo seu navegador.
 
-_Version 1.0.6 - 14.09.2023_
+### Modo de Aprendizado
+O Modo de Aprendizado permite visualizar os comportamentos dos fantasmas. (O quadrado colorido representa a isca dos fantasmas.)
 
-- adjust license
-- update npm dependencies
+![Aprendizado][2]
 
-_Version 1.0.5 - 22.03.2021_
+Modo de Prática
+Este modo permite praticar o jogo com recursos especiais. Você pode entrar em câmera lenta ou voltar no tempo com os botões na tela ou as teclas de atalho listadas abaixo. (Os controles de manipulação do tempo e o design foram inspirados no jogo Braid). Você também pode ativar invencibilidade ou visualizadores de fantasmas no menu.
 
-- add webpack config
-- fix finished game state
-- show console logs when started locally
+![Prática][3]
 
-_Version 1.0.4 - 26.12.2020_
+### Controles de Prática
+shift: pressione para voltar no tempo (como em Braid)
+1: pressione para diminuir a velocidade do jogo para 0,5x
+2: pressione para diminuir a velocidade do jogo para 0,25x
+o: alternar o modo turbo do Pac-Man
+p: alternar o modo de atração do Pac-Man (jogo automático)
+i: alternar invencibilidade do Pac-Man
+n: avançar para o próximo nível
+q,w,e,r,t: alternar o gráfico de destino para blinky, pinky, inky, clyde e pacman, respectivamente.
+a,s,d,f,g: alternar o gráfico de trajetória para blinky, pinky, inky, clyde e pacman, respectivamente.
+Mapas Gerados Proceduralmente
+No modo de jogo Cookie-Man, os labirintos mudam tão frequentemente quanto em Ms. Pac-Man, mas são gerados proceduralmente. Cada nível possui uma paleta de cores predefinida, conferindo um elemento de consistência à estrutura aleatória dos labirintos.
 
-- remove highscore reset endpoint
+![Procedural][4]
 
-_Version 1.0.3 - 26.12.2020_
+### Descrição do Algoritmo
+Os labirintos são construídos cuidadosamente para se aproximar dos padrões de design deduzidos dos mapas originais encontrados em Pac-Man e Ms. Pac-Man.
 
-- fix speed issue
+Precisão
+É um objetivo deste projeto permanecer razoavelmente fiel ao jogo de fliperama original. A precisão atual se deve ao trabalho dos engenheiros reversos Jamey Pittman e Bart Grantham.
 
-_Version 1.0.2 - 26.12.2020_
+### Inexatidões
 
-- add get started section in README
-- limit to 10 levels for now
-- small refactorings
-- add score validation in JS
+Os temporizadores de certos eventos não críticos, como pausas na exibição de pontuação e animações de piscamento de mapa, são atualmente aproximados.
 
-_Version 1.0.1 - 6.10.2020_
+Infelizmente, você não pode usar padrões do Pac-Man original devido a complicações com geradores de números aleatórios.
 
-- add `bump-version.sh` to make versioning easier
+Além disso, a detecção de colisão é mais rigorosa do que a original (verificada duas vezes com mais frequência) para evitar "bugs" de passagem.
 
-_Version 1.0.0 - 5.9.2020_
+Também optei por deixar de fora o bug de estouro que muda o alvo de um fantasma quando o Pac-Man está voltado para cima, detalhado aqui.
 
-- use "default" version number format, go up to 1.0.0
-- add `package.json`
-- add `server.js`
-- you can now run pacman running an express JS server, using `npm start`
-- don't use ajax `async: false` anymore to load map config, since it has been marked as deprecated
+### Relatar/Corrigir Bugs
+Sinta-se à vontade para relatar qualquer inexatidão que possa prejudicar ou simplesmente incomodar. Qualquer engenheiro reverso disposto a contribuir com sua experiência para este projeto seria de grande ajuda também!
 
-_Version 0.93 - 8.1.2020_
-
-- add `ads.txt`
-
-_Version 0.92 - 6.3.2018_
-
-- remove navigator.vibrate() calls
-
-_Version 0.91 - 15.01.2016_
-
-- more tests to avoid cheaters
-- better highscore form validation
-- timer integrated (not in use yet)
-- "your screen is too small to play in landscape view" message removed
-- fix number of points for eating a ghost
-
-_Version 0.9 - 15.10.2015_
-
-- different difficulties depending on level
-- scatter / chase indicated through wall colour
-- extended instructions
-
-_Version 0.87 - 08.10.2015_
-
-- fix a bug that allowed resuming a game after game over
-
-_Version 0.86 - 25.05.2015_
-
-- some security fixes to avoid cheaters from adding highscores
-
-_Version 0.84 - 09.11.2014_
-
-- fixed bug that caused game to crash when leaving game area to the right side while holding the right arrow
-
-_Version 0.83 - 07.05.2014_
-
-- not possible to stop by turning into walls anymore
-- mute / unmute the game by pressing the "M" key
-
-_Version 0.82 - 02.04.2014_
-
-- small bugfixes
-- swipe gestures detection on the whole screen not only game area
-
-_Version 0.81 - 16.03.2014_
-
-- Ghost Modes Scatter & Chase
-- Pathfinding AI for Blinky
-- Ghosts need to return to Ghost House when dead
-
-_Version 0.8 - 13.11.2013_
-
-- lots of small changes in the backend
-- when you go in landscape mode and your screen is too small to display the whole site, you get notified to rotate your phone into portrait mode
-- all onClick and onMousedown in HTML removed and replaced by EventListeners in JavaScript
-- Pacman Canvas now uses ApplicationCache to cache its content, so you can play the game offline!
-
-_Version 0.78 - 05.11.2013_
-
-- navigation via buttons should be less delayed by using onMouseDown event instead of onClick
-- refreshRate is now a game attribute and could be changed easily during the game (not yet implemented in frontend)
-
-_Version 0.77 - 24.05.2013_
-
-- Ghosts start to blink before to undazzle
-- Pacman now dies with style
-
-_Version 0.76 - 02.05.2013_
-
-- You can now use the usual arrow keys to control pacman
-- fixed 2 small bugs regarding KeyEvents
-
-_Version 0.75 - 28.04.2013_
-
-- You can pause / resume the game by pressing SPACE
-- ESC is no longer used to pause / resume, but to go back to the main view
-- Game Menu only showing while game is paused
-- some css tweaks
-- Simple Highscore implemented using Ajax, Json and Sqlite3
-
-_Version 0.74 - 25.04.2013_
-
-- You can pause / resume the game by pressing ESC or clicking into canvas
-- Swipe Gestures using hammerjs
-- replaced alerts by nice html overlay messages
-
-_Version 0.73 - 17.04.2013_
-
-- You can play on until you lost all your 3 lives
-- Ghosts state gets reset everytime they get eaten or new level starts
-
-_Version 0.72 - 30.01.2013_
-
-- Ghost Base Door
-- Reset Game after winning
-
-_Version 0.71 - 30.01.2013_
-
-- Ghosts can die too
-
-_Version 0.7 - 29.01.2013_
-
-- Powerpills & Beastmode
-
-_Version 0.63 - 29.01.2013_
-
-- Pills now get loaded over external json file (map.json)
-- ghost collisions implemented -> dying
-- tried to clean up the code a bit
-
-_Version 0.62 - 23.01.2013_
-
-- disable zoom on Mobile
-- change name to Pacman Canvas (Alpha)
-
-_Version 0.61 - 12.01.2013_
-
-- all walls defined (incl. collisions)
-
-_Version 0.6 - 12.01.2013_
-
-- small fixes for mobile view
-- sound control (default: muted)
-- collision control for walls
-- json datastructure design for all game objects (pills, magic pills, walls)
-
-_Version 0.41 - 10.12.2012_
-
-- Mobile Design Fix
-- New Icon
-
-_Version 0.40 - 08.12.2012_
-
-- Control Buttons for mobile
-- Small Design Updates
-
-_Version 0.30 - 05.12.2012_
-
-- Touch Support via jGestures
-- Responsive
-
-_Version 0.20 - 22.11.2012_
-
-- Code Refactored for further development
-- Sound added
-- Appcache implemented
-
-_Version 0.13 - 29.10.2012_
-
-- Never miss a dot: Pacman now always stays in the grid.
-
-_Version 0.12 - 19.10.2012_
-
-- Pacman is now able to eat the dots. Eating a dot equals 10 points for now.
-- LiveScore implemented.
-- Game ends when all dots are eaten.
-
-_Version 0.11 - 15.10.2012_
-
-- Placing white Dots and storing them in a Hashtable
-- Monster/Ghost Prototype
-- Score Prototype
-- Pacman had to get smaller (r=15px)
-- Display Grid
-- Refactoring HTML
-
-_Version 0.10 - 23.08.2012_
-
-- Started cleaning up the code using Objects
-- Pacman now turns around when changing directions
